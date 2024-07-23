@@ -5,7 +5,8 @@ const Home = () => {
   return (
     <div className="page">
       <Piano root={-1} selectedNotes={[]} />
-      <br />
+     
+      <h3>Piano Buddy</h3>
       <Link to="/mode">
         <button>Mode Finder</button>
       </Link>{" "}
