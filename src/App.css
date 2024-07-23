@@ -17,6 +17,7 @@
   display: inline-block;
   height: 100%;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .key__white {
   background-color: white;

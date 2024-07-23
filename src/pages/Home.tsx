@@ -4,8 +4,7 @@ import Piano from "../components/Piano";
 const Home = () => {
   return (
     <div className="page">
-      <Piano root={-1} selectedNotes={[]} />
-     
+      <Piano root={-1} selectedNotes={[]} />     
       <h3>Piano Buddy</h3>
       <Link to="/mode">
         <button>Mode Finder</button>
