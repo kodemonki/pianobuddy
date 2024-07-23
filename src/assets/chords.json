@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Major 7th",
+    "notes": [0, 2, 4, 6],
+    "adjustments": [0, 0, 0, 0]
+  },
+  {
+    "name": "Dominant 7th",
+    "notes": [0, 2, 4, 6],
+    "adjustments": [0, 0, 0, -1]
+  },
+  {
+    "name": "Minor 7th",
+    "notes": [0, 2, 4, 6],
+    "adjustments": [0, -1, 0, -1]
+  },
+  {
+    "name": "Half Diminished 7th",
+    "notes": [0, 2, 4, 6],
+    "adjustments": [0, -1, -1, -1]
+  },
+  {
+    "name": "Diminished 7th",
+    "notes": [0, 2, 4, 6],
+    "adjustments": [0, -1, -1, -2]
+  },
+  {
+    "name": "Major 6th",
+    "notes": [0, 2, 4, 5],
+    "adjustments": [0, 0, 0, 0]
+  },
+  {
+    "name": "Minor 6th",
+    "notes": [0, 2, 4, 5],
+    "adjustments": [0, -1, 0, 0]
+  }
+]

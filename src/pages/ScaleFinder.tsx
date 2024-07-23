@@ -3,7 +3,7 @@ import Piano from "../components/Piano";
 import modes from "../assets/modes.json";
 import scales from "../assets/scales.json";
 import { useEffect, useState } from "react";
-const notes = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
+import config from "../service/config";
 
 const ScaleFinder = () => {
   const [selectedNotes, setSelectedNotes] = useState<number[]>([]);
@@ -21,12 +21,9 @@ const ScaleFinder = () => {
       if (num >= 12) num -= 12;
       selectedArray.push(num);
     });
-    console.log(selectedArray);
     modes[selectedMode].notes.forEach((adjustment, index) => {
       selectedArray[index] = selectedArray[index] + adjustment;
     });
-
-    console.log(selectedArray);
 
     setSelectedNotes(selectedArray);
   }, [selectedKey, selectedMode]);
@@ -47,7 +44,7 @@ const ScaleFinder = () => {
       <form>
         <label>Key</label>{" "}
         <select onChange={handleChangeKey} id="key">
-          {notes.map((note, index) => {
+          {config.notes.map((note, index) => {
             return (
               <option key={note} value={index}>
                 {note}

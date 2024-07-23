@@ -1,5 +1,5 @@
 const config = {
-  phaser_div_id: "phaser-parent",
+  notes : ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"]
 };
 
 export default config;
