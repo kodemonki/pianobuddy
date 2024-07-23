@@ -41,7 +41,6 @@ const ChordFinder = () => {
 
   return (
     <div className="page">
-      <h2>Chord Finder</h2>
       <Piano root={selectedKey} selectedNotes={selectedNotes} />
       <br />
       <form>

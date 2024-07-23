@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import Piano from "../components/Piano";
+import modes from "../assets/modes.json";
 import scales from "../assets/scales.json";
 import { useEffect, useState } from "react";
 import config from "../service/config";
 
-const ScaleFinder = () => {
+const ModeFinder = () => {
   const [selectedNotes, setSelectedNotes] = useState<number[]>([]);
-  const [selectedScale, setSelectedScale] = useState(0);
+  const [selectedMode, setSelectedMode] = useState(0);
   const [selectedKey, setSelectedKey] = useState(0);
 
   useEffect(() => {
@@ -14,19 +15,25 @@ const ScaleFinder = () => {
   }, []);
 
   useEffect(() => {
-    const scaleArray: number[] = [];
-    scales[selectedScale].notes.forEach((scale)=>{
-      scaleArray.push(scale + selectedKey);
-    }) 
-    setSelectedNotes(scaleArray);
-  }, [selectedKey, selectedScale]);
+    const selectedArray: number[] = [];
+    scales[0].notes.forEach((note) => {
+      let num = note + selectedKey;
+      if (num >= 12) num -= 12;
+      selectedArray.push(num);
+    });
+    modes[selectedMode].notes.forEach((adjustment, index) => {
+      selectedArray[index] = selectedArray[index] + adjustment;
+    });
+
+    setSelectedNotes(selectedArray);
+  }, [selectedKey, selectedMode]);
 
   const handleChangeKey = (e: { target: { value: string } }) => {
     setSelectedKey(Number(e.target.value));
   };
 
-  const handleChangeScale = (e: { target: { value: string } }) => {
-    setSelectedScale(Number(e.target.value));
+  const handleChangeMode = (e: { target: { value: string } }) => {
+    setSelectedMode(Number(e.target.value));
   };
 
   return (
@@ -44,12 +51,12 @@ const ScaleFinder = () => {
             );
           })}
         </select>{" "}
-        <label>Scale</label>{" "}
-        <select onChange={handleChangeScale}>
-          {scales.map((scale, index) => {
+        <label>Mode</label>{" "}
+        <select onChange={handleChangeMode}>
+          {modes.map((mode, index) => {
             return (
-              <option key={scale.name} value={index}>
-                {scale.name}
+              <option key={mode.name} value={index}>
+                {mode.name}
               </option>
             );
           })}
@@ -63,4 +70,4 @@ const ScaleFinder = () => {
   );
 };
 
-export default ScaleFinder;
+export default ModeFinder;

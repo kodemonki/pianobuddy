@@ -4,14 +4,16 @@ import Piano from "../components/Piano";
 const Home = () => {
   return (
     <div className="page">
-      <h2>Piano Buddy</h2>
       <Piano root={-1} selectedNotes={[]} />
       <br />
+      <Link to="/mode">
+        <button>Mode Finder</button>
+      </Link>{" "}
       <Link to="/scale">
-        <button>ScaleFinder</button>
+        <button>Scale Finder</button>
       </Link>{" "}
       <Link to="/chord">
-        <button>ChordFinder</button>
+        <button>Chord Finder</button>
       </Link>
     </div>
   );
