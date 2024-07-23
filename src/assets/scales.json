@@ -1,18 +1,18 @@
 [
   {
-    "name": "major",
+    "name": "Major",
     "notes": [0, 2, 4, 5, 7, 9, 11]
   },
   {
-    "name": "natural minor",
+    "name": "Natural minor",
     "notes": [0, 2, 3, 5, 7, 8, 10]
   },
   {
-    "name": "melodic minor",
+    "name": "Melodic minor",
     "notes": [0, 2, 3, 5, 7, 9, 11]
   },
   {
-    "name": "harmonic minor",
+    "name": "Harmonic minor",
     "notes": [0, 2, 3, 5, 7, 8, 11]
   },
   {

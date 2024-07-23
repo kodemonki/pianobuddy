@@ -1,30 +1,30 @@
 [
   {
-    "name": "ionian",
+    "name": "Ionian",
     "notes": [0, 0, 0, 0, 0, 0, 0]
   },
   {
-    "name": "dorian",
+    "name": "Dorian",
     "notes": [0, 0, -1, 0, 0, 0, -1]
   },
   {
-    "name": "phrygian",
+    "name": "Phrygian",
     "notes": [0, -1, -1, 0, 0, -1, -1]
   },
   {
-    "name": "lydian",
+    "name": "Lydian",
     "notes": [0, 0, 0, 1, 0, 0, 0]
   },
   {
-    "name": "mixolydian",
+    "name": "Mixolydian",
     "notes": [0, 0, 0, 0, 0, 0, -1]
   },
   {
-    "name": "aolean",
+    "name": "Aolean",
     "notes": [0, 0, -1, 0, 0, -1, -1]
   },
   {
-    "name": "locrian",
+    "name": "Locrian",
     "notes": [0, -1, -1, 0, -1, -1, -1]
   }
 ]

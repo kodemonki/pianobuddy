@@ -39,7 +39,7 @@ const ScaleFinder = () => {
           {config.notes.map((note, index) => {
             return (
               <option key={note} value={index}>
-                {note}
+                {note.toUpperCase()}
               </option>
             );
           })}
