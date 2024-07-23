@@ -41,6 +41,8 @@ const ScaleFinder = () => {
       <h2>
         Scale Finder
       </h2>
+      <Piano root={selectedKey} selectedNotes={selectedNotes}/>
+      <br />
       <form>
         <label>Key</label>{" "}
         <select onChange={handleChangeKey} id="key">
@@ -63,9 +65,7 @@ const ScaleFinder = () => {
           })}
         </select>
       </form>
-      <br />
-      <Piano root={selectedKey} selectedNotes={selectedNotes}/>
-      <br />
+      <br/>
       <Link to="/">
         <button>Back</button>
       </Link>
