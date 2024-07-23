@@ -3,40 +3,46 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.page {
+  max-width: 1024px;
+  max-height: 768px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.piano {
+  height: 250px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.key {
+  display: inline-block;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-.card {
-  padding: 2em;
+.key__white {
+  background-color: white;
+  border: 1px darkgrey solid;
+  color: black;
+  width: 42px;
 }
 
-.read-the-docs {
-  color: #888;
+.key__black {
+  background-color: black;
+  border: 1px darkgrey solid;
+  position: absolute;
+  height: 50%;
+  top: 0px;
+  color: white;
+  width: 30px;
+  transform: translateX(-50%);
+}
+
+.key__selected {
+  background-color: blueviolet;
+}
+.key__root {
+  background-color: darkslateblue;
 }

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ionian",
+    "notes": [0, 0, 0, 0, 0, 0, 0]
+  },
+  {
+    "name": "dorian",
+    "notes": [0, 0, -1, 0, 0, 0, -1]
+  },
+  {
+    "name": "phrygian",
+    "notes": [0, -1, -1, 0, 0, -1, -1]
+  },
+  {
+    "name": "lydian",
+    "notes": [0, 0, 0, 1, 0, 0, 0]
+  },
+  {
+    "name": "mixolydian",
+    "notes": [0, 0, 0, 0, 0, 0, -1]
+  },
+  {
+    "name": "aolean",
+    "notes": [0, 0, -1, 0, 0, -1, -1]
+  },
+  {
+    "name": "locrian",
+    "notes": [0, -1, -1, 0, -1, -1, -1]
+  }
+]
