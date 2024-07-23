@@ -67,7 +67,7 @@ const ScaleFinder = () => {
         </select>
       </form>
       <br />
-      <Piano root={selectedKey} selectedNotes={selectedNotes} octaves={2}/>
+      <Piano root={selectedKey} selectedNotes={selectedNotes}/>
       <br />
       <Link to="/">
         <button>Back</button>

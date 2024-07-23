@@ -6,7 +6,7 @@ const ChordFinder = () => {
     <div className="page">
       <h2>Chord Finder</h2>
       <br />
-      <Piano root={-1} selectedNotes={[]} octaves={1} />
+      <Piano root={-1} selectedNotes={[]} />
       <br />
       <Link to="/">
         <button>Back</button>

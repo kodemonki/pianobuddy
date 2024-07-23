@@ -1,12 +1,11 @@
+import useBreakpoint from "../hooks/useBreakpoint";
+
 interface PianoProps {
   root: number;
   selectedNotes: number[];
-  octaves: number;
 }
 
-const Piano: React.FC<PianoProps> = ({ root, selectedNotes, octaves }) => {
-  console.log(selectedNotes);
-
+const Piano: React.FC<PianoProps> = ({ root, selectedNotes }) => {
   const selected0 = selectedNotes.includes(0);
   const selected1 = selectedNotes.includes(1);
   const selected2 = selectedNotes.includes(2);
@@ -19,6 +18,8 @@ const Piano: React.FC<PianoProps> = ({ root, selectedNotes, octaves }) => {
   const selected9 = selectedNotes.includes(9);
   const selected10 = selectedNotes.includes(10);
   const selected11 = selectedNotes.includes(11);
+
+  const breakpoint = useBreakpoint();
 
   const Octave = () => {
     return (
@@ -87,11 +88,14 @@ const Piano: React.FC<PianoProps> = ({ root, selectedNotes, octaves }) => {
     );
   };
 
+  const isSmall = breakpoint === "xs" || breakpoint === "sm";
+  const isMedium = breakpoint === "md";
+
   return (
     <div className="piano">
-      {octaves > 0 && <Octave />}
-      {octaves > 1 && <Octave />}
-      {octaves > 2 && <Octave />}
+      {<Octave />}
+      {!isSmall && <Octave />}
+      {!isSmall && !isMedium && <Octave />}
     </div>
   );
 };

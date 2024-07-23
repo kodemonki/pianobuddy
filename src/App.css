@@ -5,30 +5,25 @@
   text-align: center;
   overflow: hidden;
 }
-
 .page {
   max-width: 1024px;
   max-height: 768px;
 }
-
 .piano {
   height: 250px;
   position: relative;
 }
-
 .key {
   display: inline-block;
   height: 100%;
   box-sizing: border-box;
 }
-
 .key__white {
   background-color: white;
   border: 1px darkgrey solid;
   color: black;
   width: 42px;
 }
-
 .key__black {
   background-color: black;
   border: 1px darkgrey solid;
@@ -39,10 +34,38 @@
   width: 30px;
   transform: translateX(-50%);
 }
-
 .key__selected {
   background-color: blueviolet;
 }
 .key__root {
   background-color: darkslateblue;
+}
+
+.hidden-on-mobile{
+  display:none;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .hidden-on-mobile{
+    display:none;
+  }
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .hidden-on-mobile{
+    display:inline-block;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 }
