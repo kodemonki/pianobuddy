@@ -16,7 +16,10 @@ const ScaleFinder = () => {
   useEffect(() => {
     const scaleArray: number[] = [];
     scales[selectedScale].notes.forEach((scale)=>{
-      scaleArray.push(scale + selectedKey);
+      let num = scale + selectedKey;
+      if (num >= 12) num -= 12;
+      scaleArray.push(num);
+
     }) 
     setSelectedNotes(scaleArray);
   }, [selectedKey, selectedScale]);

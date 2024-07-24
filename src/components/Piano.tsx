@@ -7,6 +7,10 @@ interface PianoProps {
   selectedNotes: number[];
 }
 
+interface OctaveProps {
+  octaveNumber: number;
+}
+
 const Piano: React.FC<PianoProps> = ({ root, selectedNotes }) => {
   const selected0 = selectedNotes.includes(0);
   const selected1 = selectedNotes.includes(1);
@@ -23,14 +27,12 @@ const Piano: React.FC<PianoProps> = ({ root, selectedNotes }) => {
 
   const breakpoint = useBreakpoint();
 
-  //create a synth and connect it to the main output (your speakers)
-  const synth = new Tone.Synth().toDestination();
+  const synth = new Tone.Synth().toDestination(); 
 
-  const onKeyboardPress = (note: number) => {
-    synth.triggerAttackRelease(`${config.notes[note]}4`, "16n");
-  };
-
-  const Octave = () => {
+  const Octave:React.FC<OctaveProps> = ({octaveNumber}) => {
+    const onKeyboardPress = (note: number) => {
+      synth.triggerAttackRelease(`${config.notes[note]}${octaveNumber}`, "16n");
+    };
     return (
       <>
         <div
@@ -138,9 +140,9 @@ const Piano: React.FC<PianoProps> = ({ root, selectedNotes }) => {
 
   return (
     <div className="piano">
-      {<Octave />}
-      {!isSmall && <Octave />}
-      {!isSmall && !isMedium && <Octave />}
+      {<Octave octaveNumber={3}/>}
+      {!isSmall && <Octave octaveNumber={4}/>}
+      {!isSmall && !isMedium && <Octave octaveNumber={5}/>}
     </div>
   );
 };
